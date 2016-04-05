@@ -11,10 +11,10 @@ Adafruit_DCMotor *motor4 = shield.getMotor(4);
 void setup() {
   shield.begin();
 
-  motor1->setSpeed(100);
-  motor2->setSpeed(100);
-  motor3->setSpeed(100);
-  motor4->setSpeed(100);
+  motor1->setSpeed(20);
+  motor2->setSpeed(20);
+  motor3->setSpeed(20);
+  motor4->setSpeed(20);
 
 }
 
