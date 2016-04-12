@@ -88,45 +88,5 @@ void loop() {
   move(speed, -speed, speed, -speed);//turn left
   delay(3000);
   
-/*  //forward
-  motor1->run(FORWARD);
-  motor2->run(FORWARD);
-  motor3->run(FORWARD);
-  motor4->run(FORWARD);
-  delay(3000);
 
-  //backward
-  motor1->run(BACKWARD);
-  motor2->run(BACKWARD);
-  motor3->run(BACKWARD);
-  motor4->run(BACKWARD);
-  delay(3000);
-
-  //strafe right
-  motor1->run(BACKWARD);
-  motor2->run(FORWARD);
-  motor3->run(FORWARD);
-  motor4->run(BACKWARD);
-  delay(3000);
-
-  //strafe left
-  motor1->run(FORWARD);
-  motor2->run(BACKWARD);
-  motor3->run(BACKWARD);
-  motor4->run(FORWARD);
-  delay(3000);
-
-  //turn right
-  motor1->run(BACKWARD);
-  motor2->run(FORWARD);
-  motor3->run(BACKWARD);
-  motor4->run(FORWARD);
-  delay(3000);
-
-  //turn left
-  motor1->run(FORWARD);
-  motor2->run(BACKWARD);
-  motor3->run(FORWARD);
-  motor4->run(BACKWARD);
-  delay(3000);*/
 }
