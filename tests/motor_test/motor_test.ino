@@ -42,11 +42,11 @@ void move(int fl, int fr, int bl, int br) {
   }
   else if(bl >= 0) {
     motorbl->setSpeed(bl);
-    motorbl->run(FORWARD);
+    motorbl->run(BACKWARD);
   }
   else {
     motorbl->setSpeed(-bl);
-    motorbl->run(BACKWARD);
+    motorbl->run(FORWARD);
   }
 
     if(br > 255 || br < -255) {
@@ -55,11 +55,11 @@ void move(int fl, int fr, int bl, int br) {
   }
   else if(br >= 0) {
     motorbr->setSpeed(br);
-    motorbr->run(FORWARD);
+    motorbr->run(BACKWARD);
   }
   else {
     motorbr->setSpeed(-br);
-    motorbr->run(BACKWARD);
+    motorbr->run(FORWARD);
   }
 }
 
@@ -76,16 +76,16 @@ void loop() {
   move(-speed, -speed, -speed, -speed);//backward
   delay(3000);
 
-  move(-speed, speed, speed, -speed);//right
+  move(speed, -speed, -speed, speed);//right
   delay(3000);
 
-  move(speed, -speed, -speed, speed);//left
+  move(-speed, speed, speed, -speed);//left
   delay(3000);
 
-  move(-speed, speed, -speed, speed);//turn right
+  move(speed, -speed, speed, -speed);//turn right
   delay(3000);
 
-  move(speed, -speed, speed, -speed);//turn left
+  move(-speed, speed, -speed, speed);//turn left
   delay(3000);
   
 
