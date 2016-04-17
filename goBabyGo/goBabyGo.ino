@@ -75,6 +75,8 @@ void setup() {
   
    //Read from Computer
    Serial.begin(9600); 
+   shield.begin();
+
 }
 
 void loop() {
