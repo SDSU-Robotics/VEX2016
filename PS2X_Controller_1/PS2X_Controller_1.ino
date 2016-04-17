@@ -1,7 +1,9 @@
 //Cytron PS2 Shield (SHIELD-PS2)
 //www.cytron.com.my
 //sample code to retrieve a btn status on PS2 Controller
- 
+
+//http://www.robotshop.com/media/files/zip/documentation-shield-ps2.zip
+
 #include <Shield_PS2.h>
 
 //declare class objects
