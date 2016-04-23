@@ -73,8 +73,8 @@ void getSpeedJoystick(int x, int y, int & out, int & inn) {
   x = 2 * x - 255;
   y = 2 * y - 255;
   
-  int i = x - y;
-  int o = x + y;
+  int i = x + y;
+  int o = x - y;
 
   if (o > -255 && o < 255)
     out = 2 * maxSpeed / 510 * o;
