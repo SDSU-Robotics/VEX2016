@@ -81,9 +81,17 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  const int speed = 75;
+  const int speed = 200;
 
-  if (ps2.getval(p_up) == 0)
+  if (ps2.getval(p_left) == 0 && ps2.getval(p_up) == 0)
+    move(0, speed, speed, 0);
+  else if (ps2.getval(p_right) == 0 && ps2.getval(p_up) == 0)
+    move(speed, 0, 0, speed);
+  else if (ps2.getval(p_left) == 0 && ps2.getval(p_down) == 0)
+    move(-speed, 0, 0, -speed);
+  else if (ps2.getval(p_right) == 0 && ps2.getval(p_down) == 0)
+    move(0, -speed, -speed, 0);
+  else if (ps2.getval(p_up) == 0)
     move(speed, speed, speed, speed);//forward
   else if (ps2.getval(p_left) == 0)
     move(-speed, speed, speed, -speed);//left
