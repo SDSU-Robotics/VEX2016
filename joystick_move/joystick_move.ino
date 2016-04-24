@@ -71,31 +71,25 @@ void move(int fl, int fr, int bl, int br) {
 
 void getSpeedJoystick(int x, int y, int & out, int & inn) {
   x = 2 * x - 255;
-  y = 2 * y - 255;
+  y = -2 * y + 255;
   int disp = sqrt(x * x + y * y);
   int ang = atan(y / x);
   
-  if (disp > 20) {
-    if (x >= 0 && y >= 0) {
-      inn = (ang - 3.14 / 4) * 4 / 3.14 * maxSpeed;
-      out = 2 * maxSpeed / 255 * disp;
-    }
-    else if (x < 0 && y >= 0) {
-      inn = 2 * maxSpeed / 255 * disp;
-      out = (ang + 3.14 / 4) * 4 / 3.14 * maxSpeed;
-    }
-    else if (x < 0 && y < 0) {
-      inn = (ang + 3.14 / 4) * 4 / 3.14 * maxSpeed;
-      out = -2 * maxSpeed / 255 * disp;
-    }
-    else {
-      inn = -2 * maxSpeed / 255 * disp;
-      out = (ang - 3.14 / 4) * 4 / 3.14 * maxSpeed;
-    }
+  if (x >= 0 && y >= 0) {
+    inn = (ang - 3.14 / 4) * 4 / 3.14 * maxSpeed;
+    out = 2 * maxSpeed / 255 * disp;
+  }
+  else if (x < 0 && y >= 0) {
+    inn = 2 * maxSpeed / 255 * disp;
+    out = (ang + 3.14 / 4) * 4 / 3.14 * maxSpeed;
+  }
+  else if (x < 0 && y < 0) {
+    inn = (ang + 3.14 / 4) * 4 / 3.14 * maxSpeed;
+    out = -2 * maxSpeed / 255 * disp;
   }
   else {
-    out = 0;
-    inn = 0;
+    inn = -2 * maxSpeed / 255 * disp;
+    out = (ang - 3.14 / 4) * 4 / 3.14 * maxSpeed;
   }
 }
 
